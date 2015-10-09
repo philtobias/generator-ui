@@ -1,0 +1,16 @@
+{
+  "name": "generator-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "generators/app/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "^0.20.3",
+    "yosay": "^1.0.0"
+  }
+}
