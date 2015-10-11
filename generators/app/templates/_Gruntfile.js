@@ -20,6 +20,7 @@ module.exports = function(grunt, undefined) {
     [
       'jshint',
       'jasmine:unit',
+      'sass:main',
       'concurrent:development'
     ]
   );
