@@ -12,6 +12,14 @@ module.exports = {
       'jasmine:unit'
     ]
   },
+  sass: {
+    files: [
+      '<%= pkg.config.buildDir %>/src/sass/**/*.scss'
+    ],
+    tasks: [
+      'sass:main'
+    ]
+  },
   unit: {
     files: [
       'tests/unit/**/*.spec.js'

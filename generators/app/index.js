@@ -38,9 +38,9 @@ module.exports = generators.Base.extend({
     },
 
     app: function() {
-      this.fs.copyTpl(
-        this.templatePath('src/js/app.js'),
-        this.destinationPath(this.appNameSlug, 'src/js/app.js')
+      this.directory(
+        'src',
+        this.appNameSlug + '/src'
       );
 
       this.fs.copyTpl(
@@ -76,7 +76,15 @@ module.exports = generators.Base.extend({
 
     tasks: function() {
       var self = this;
-      var files = ['clean', 'concurrent', 'connect', 'jasmine', 'jshint', 'watch'];
+      var files = [
+        'clean', 
+        'concurrent',
+        'connect',
+        'jasmine',
+        'jshint',
+        'sass', 
+        'watch'
+      ];
 
       files.forEach(function(file) {
         self.fs.copy(

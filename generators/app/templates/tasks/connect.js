@@ -1,6 +1,4 @@
-module.exports = function (grunt) {
-  'use strict';
-
+module.exports = function(grunt) {
   return {
     development: {
       options: {

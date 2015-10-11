@@ -1,10 +1,16 @@
 ## <%= appName %>
 
-
-## To run server and unit tests
+## Install Requirements
 
 [install node](https://nodejs.org/download/)
 
 ```
-npm i && grunt
+sudo gem install sass
+npm i
+```
+
+## To run server and unit tests
+
+```
+grunt
 ``` 
