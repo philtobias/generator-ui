@@ -39,13 +39,18 @@ module.exports = generators.Base.extend({
 
     app: function() {
       this.directory(
-        'src',
-        this.appNameSlug + '/src'
+        'src/js',
+        this.appNameSlug + '/src/js'
+      );
+
+      this.directory(
+        'src/sass',
+        this.appNameSlug + '/src/sass'
       );
 
       this.fs.copyTpl(
-        this.templatePath('index.html'),
-        this.destinationPath(this.appNameSlug, 'index.html'),
+        this.templatePath('src/index.jade'),
+        this.destinationPath(this.appNameSlug, '/src/index.jade'),
         { appName: this.appName }
       );
     },
@@ -80,9 +85,12 @@ module.exports = generators.Base.extend({
         'clean', 
         'concurrent',
         'connect',
+        'copy',
+        'jade',
         'jasmine',
         'jshint',
-        'sass', 
+        'sass',
+        'uglify', 
         'watch'
       ];
 

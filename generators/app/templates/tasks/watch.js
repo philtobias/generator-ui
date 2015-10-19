@@ -1,28 +1,38 @@
 module.exports = {
   options: {
+    livereload: true,
     interrupt: false,
     spawn: false
   },
   js: {
     files: [
-      '<%= pkg.config.buildDir %>/src/**/*.js'
+      './src/**/*.js'
     ],
     tasks: [
       'jshint',
-      'jasmine:unit'
+      'jasmine:unit',
+      'copy:js'
     ]
   },
   sass: {
     files: [
-      '<%= pkg.config.buildDir %>/src/sass/**/*.scss'
+      './src/sass/**/*.scss'
     ],
     tasks: [
       'sass:main'
     ]
   },
+  jade: {
+    files: [
+      './src/**/*.jade'
+    ],
+    tasks: [
+      'jade:templates'
+    ]
+  },
   unit: {
     files: [
-      'tests/unit/**/*.spec.js'
+      './tests/unit/**/*.spec.js'
     ],
     tasks: [
       'jshint',

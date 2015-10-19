@@ -16,11 +16,13 @@ module.exports = function(grunt, undefined) {
 
   grunt.registerTask(
     'default',
-    'jshint, unit tests, connect',
+    'jshint, unit tests, jade, sass, connect',
     [
       'jshint',
       'jasmine:unit',
+      'jade:templates',
       'sass:main',
+      'copy:js',
       'concurrent:development'
     ]
   );
