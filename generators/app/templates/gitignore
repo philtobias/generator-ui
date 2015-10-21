@@ -1,4 +1,6 @@
 node_modules
+build
+.sass-cache
 *.sublime-*
 .DS_Store
 .grunt
